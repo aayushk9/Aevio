@@ -4,8 +4,8 @@ import { motion } from "framer-motion"
 
 export function Footer() {
   return (
-    <footer className="bg-black text-white">
-      <section className="py-32 relative">
+    <footer className="bg-black text-white mt-20">
+      <section className="py-32 relative mb-15">
         <div className="absolute inset-0 overflow-hidden">
           <div
             className="absolute inset-0 opacity-50"
