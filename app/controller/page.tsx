@@ -1,9 +1,13 @@
+import { Navbar } from "@/components/Navbar/Navbar"
 export default function Controller(){
     return (
-        <section>
+        <>
+         <Navbar/>
+         <div className="">
             <div>
-                Controllers
+                <h2 className="text-white mt-20">V Intelligent Controller</h2>
             </div>
-        </section>
+         </div>
+        </>
     )
 }
