@@ -1,10 +1,12 @@
 import { Navbar } from "@/components/Navbar/Navbar"
+import { Footer } from "@/components/Footer/Footer"
+
 export default function Controller() {
     return (
-        <section className="mb-5">
+        <section className="mb-5 w-full overflow-x-hidden">
             <Navbar />
             <div className="pt-20">
-                <div className="absolute inset-0 z-0 relative h-[90vh] flex flex-col md:flex-row items-center justify-center overflow-hidden rounded-2xl border mx-0 sm:mx-6 my-10"
+                <div className="z-0 relative h-[85vh] flex flex-col md:flex-row items-center justify-center overflow-hidden rounded-2xl border sm:mx-6 my-10"
                     style={{
                         background:
                             "linear-gradient(to bottom, black 10%, oklch(47.3% 0.137 46.201) 70%, oklch(83.7% 0.128 66.29))",
@@ -19,13 +21,14 @@ export default function Controller() {
                     </div>
                 </div>
 
-                <div className="absolute inset-0 z-0 relative h-[50vh] flex flex-col md:flex-row items-center justify-center mt-50 mx-0">
+                <section className="absolute inset-0 z-0 relative h-[50vh] flex flex-col md:flex-row items-center justify-center mt-20 mx-0 h-screen">
                     <div className="z-10 px-4 mb-1 md:mb-6 max-w-2xl md:mr-60">
                         <h1 className="text-gray-200 text-3xl md:text-5xl font-semibold leading-tight">
-                            Run precise flight <br />logic on dual-core <br />architecture
+                            Run precise flight <br />logic on <a className="no-underline text-orange-500">dual core</a> <br />architecture
                         </h1>
-                        <p className="text-gray-300 text-base md:text-md mb-10 mt-6 leading-relaxed">
-                            V1 uses its STM32H743VIT6 Arm® Cortex®-M7 processor to execute real-time control loops and sensor fusion at high speed. Its co-processor handles telemetry, GPS, and motor control — ensuring stability even in demanding conditions.
+                        <p className="text-gray-300 text-base md:text-xl mb-10 mt-6 leading-relaxed">
+                            V1 uses its <strong><a className="text-gray-400">Arm® Cortex®-M7 processor</a></strong> to execute real time control loops and sensor fusion at high speed. 
+                            Its co-processor handles telemetry, GPS and motor control ensuring stability.
                         </p>
                     </div>
                     <div className="rounded-2xl  md: border border-gray-800 px-10 py-10">
@@ -44,12 +47,76 @@ export default function Controller() {
                               > System Status: All systems nominal `}
                         </pre>
                     </div>
-                </div>
+                </section>
 
-                <div className="absolute insert-0 z-0 relative h-[90vh] flex flex-col md:flex-row items-center justify-center overflow-hidden rounded-2xl border mx-0 sm:mx-6"
+                <section className="flex flex-col h-screen md:space-x-45 mb-20">
+                    <div className="ml-4 md:ml-40 max-w-2xl">
+                        <h2 className="text-gray-200 text-3xl md:text-5xl font-semibold leading-tight">Integrated <a className="text-indigo-500">Reliability</a> <br /> Architecture</h2>
+                        <p className="text-gray-300 md:text-md leading-relaxed mb-10 mt-6">
+                            V1 single, monobolic flight core combines all cube class features
+                            into one compact PCB . It is cleaner, lighter and more reliable
+                            alternative to traditional cube style stacks, Why choose IRA over cube stacks?
+                        </p>
+                    </div>
+
+                    <div className="md:ml-22 rounded-xl border-gray-800 py-10 px-6 md:px-16">
+                        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12 text-gray-300 border-t border-b border-zinc-700 py-10">
+
+                            <div className="hidden lg:block absolute left-1/3 top-0 bottom-0 w-px bg-zinc-700"></div>
+                            <div className="hidden lg:block absolute left-2/3 top-0 bottom-0 w-px bg-zinc-700"></div>
+                            <div>
+                                <h3 className="flex items-center gap-2 text-lg font-semibold text-gray-100">
+                                    Fewer Failure Points
+                                </h3>
+                                <p className="mt-2 text-sm text-gray-400 leading-relaxed">
+                                    Higher real-world uptime with reduced interconnects and simplified PCB routing.
+                                </p>
+                            </div>
+
+                            <div className="md:ml-5">
+                                <h3 className="flex items-center gap-2 text-lg font-semibold text-gray-100">
+                                    Lower Profile & Mass
+                                </h3>
+                                <p className="mt-2 text-sm text-gray-400 leading-relaxed">
+                                    Compact monobloc design ensures better vibration resilience and weight efficiency.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 className="flex items-center gap-2 text-lg font-semibold text-gray-100">
+                                    Cleaner Power & EMI Behavior
+                                </h3>
+                                <p className="mt-2 text-sm text-gray-400 leading-relaxed">
+                                    Optimized grounding and component layout minimize brownouts and EMI interference.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 className="flex items-center gap-2 text-lg font-semibold text-gray-100">
+                                    Faster Integration
+                                </h3>
+                                <p className="mt-2 text-sm text-gray-400 leading-relaxed">
+                                    Shorter wiring and unified design simplify quality control and assembly.
+                                </p>
+                            </div>
+
+                            <div className="ml-5">
+                                <h3 className="flex items-center gap-2 text-lg font-semibold text-gray-100">
+                                    Same Ecosystem
+                                </h3>
+                                <p className="mt-2 text-sm text-gray-400 leading-relaxed">
+                                    Fully compatible with ArduPilot, PX4, and standard Pixhawk-style ports.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <section className="absolute insert-0 z-0 relative h-[90vh] flex flex-col md:flex-row items-center justify-center overflow-hidden rounded-2xl border mx-0"
                     style={{
                         background:
-                            "linear-gradient(to bottom, black 10%, oklch(47.3% 0.137 46.201) 70%, oklch(83.7% 0.128 66.29))"
+                            "linear-gradient(to bottom, black 60%, oklch(47.3% 0.137 46.201) 80%, oklch(83.7% 0.128 66.29))"
                     }}
                 >
                     <div>
@@ -59,15 +126,10 @@ export default function Controller() {
                     <div>
                         <p className="text-white">fnmmdm</p>
                     </div>
-                </div>
-                <h1 className="text-white">jkdndnfn</h1>
-                <div>
+                </section>
 
-                </div>
+                <Footer />
 
-                <div>
-
-                </div>
             </div>
             <style>{`
                 @keyframes move-left-to-right {
