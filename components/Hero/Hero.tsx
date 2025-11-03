@@ -18,7 +18,6 @@ export function Hero() {
   }, []);
 
   return (
-    <>
       <section>
         <div className="absolute inset-0 z-0 relative h-[90vh] flex items-center justify-center overflow-hidden rounded-2xl border mx-0 sm:mx-6 my-10"
           style={{
@@ -103,6 +102,5 @@ export function Hero() {
                 }
             `}</style>
       </section>
-    </>
   );
 }
