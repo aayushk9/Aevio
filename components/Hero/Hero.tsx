@@ -13,16 +13,16 @@ export function Hero() {
       top: Math.random() * 40,
       duration: Math.random() * 10 + 15,
       delay: Math.random() * -15,
-      color: 'bg-orange-300'
+      color: 'bg-indigo-300'
     }));
   }, []);
 
   return (
       <section>
-        <div className="absolute inset-0 z-0 relative h-[90vh] flex items-center justify-center overflow-hidden rounded-2xl border mx-0 sm:mx-6 my-10"
+        <div className="absolute inset-0 z-0 relative h-[95vh] flex items-center justify-center overflow-hidden rounded-2xl border mx-0 sm:mx-6 my-10"
           style={{
             background:
-              "linear-gradient(to bottom, black 10%, oklch(47.3% 0.137 46.201) 70%, oklch(83.7% 0.128 66.29))",
+              "linear-gradient(to bottom, black 20%, oklch(39.8% 0.195 277.366) 70%, oklch(81.1% 0.111 293.571)",
           }}>
           {particles.map(p => (
             <div
@@ -69,7 +69,7 @@ export function Hero() {
         <div className="absolute inset-0 z-0 relative h-[90vh] overflow-hidden rounded-2xl border mx-0 sm:mx-6 my-70"
           style={{
             background:
-              "linear-gradient(to bottom, oklch(83.7% 0.128 66.29) 2%, oklch(47.3% 0.137 46.201) 45%, black 80%)",
+              "linear-gradient(to bottom, oklch(81.1% 0.111 293.571) 2%, oklch(39.8% 0.195 277.366) 30%, black 80%)",
           }}>
           <h1 className="text-center mt-30 font-bold text-4xl md: text-7xl tracking-wide leading-tight text-gray-200">Hardware Built to Perform</h1>
         </div>
