@@ -51,11 +51,9 @@ export function Hero() {
               engineering
             </p>
             <div className="mt-8 flex justify-center gap-4">
-              <button className="px-6 py-3 bg-white text-black font-medium rounded-full">
-                Get started
-              </button>
-              <button className="px-6 py-3 border border-white/50 text-white font-medium rounded-full hover:bg-white/10">
-                Learn more
+            
+              <button className="px-6 py-2 border border-white/50 text-white font-medium rounded-full hover:bg-white/10">
+                Now in beta
               </button>
             </div>
           </div>
