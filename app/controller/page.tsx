@@ -7,10 +7,9 @@ export default function Controller() {
     return (
         <section className="mb-5 w-full overflow-x-hidden">
             <Navbar />
-            <div className="pt-20 space-y-10"> 
-
+            <div className="pt-20 space-y-10">
                 <div
-                    className="z-0 relative h-[85vh] flex flex-col md:flex-row items-center justify-center overflow-hidden rounded-2xl border sm:mx-6 my-10"
+                    className="z-0 relative h-[85vh] flex flex-col md:flex-row items-center justify-center overflow-hidden rounded-3xl border sm:mx-6 my-10"
                     style={{
                         background:
                             "linear-gradient(to bottom, black 20%, oklch(39.8% 0.195 277.366) 70%, oklch(81.1% 0.111 293.571))"
@@ -31,7 +30,7 @@ export default function Controller() {
 
                 <section className="relative h-[80vh] flex flex-col md:flex-row items-center justify-center mt-10 mx-0">
                     <div className="z-10 px-4 mb-1 md:mb-6 max-w-2xl md:mr-40">
-                        <h1 className="text-gray-200 text-3xl md:text-5xl font-semibold leading-tight">
+                        <h1 className="xs:text-center text-gray-200 text-3xl md:text-5xl font-semibold leading-tight">
                             Run precise flight <br />logic on <a className="no-underline text-indigo-600">dual core</a> <br />architecture
                         </h1>
                         <p className="text-gray-300 text-base md:text-xl mb-10 mt-6 leading-relaxed">
@@ -40,7 +39,7 @@ export default function Controller() {
                         </p>
                     </div>
                     <div className="rounded-2xl border border-gray-800 px-10 py-10">
-                        <pre className="text-white text-sm md:text-base leading-relaxed">
+                        <pre className="text-gray-300 text-base md:text-base leading-relaxed">
                             {`Booting Aevio V1 firmware
 Initializing sensors
 IMU: Dual 6-axis calibrated
@@ -57,23 +56,83 @@ System Status: All systems nominal`}
                     </div>
                 </section>
 
-                <section className="flex flex-col h-auto mb-20 mt-10">
+                <section className="flex flex-col items-center justify-center overflow-hidden rounded-3xl border mx-8 mt-4 mb-10">
+                    <div className="flex flex-col items-center justify-center mt-20 space-y-5 text-center mr-6">
+                        <h1 className="text-3xl md:text-5xl font-semibold text-gray-300">Engineered For Real World Missions</h1>
+                    </div>
+
+                    <div className="flex justify-center items-center">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-20 items-stretch">
+                            <div className="border border-gray-800 rounded-2xl px-8 py-15"
+                                style={{
+                                    background:
+                                        "linear-gradient(to bottom, oklch(58.5% 0.233 277.117) 2%, oklch(25.7% 0.09 281.288) 30%, black 80%)",
+                                }}
+                            >
+                                <h3 className="text-gray-200 text-xl md:text-3xl">Artificial Intelligence</h3>
+                                <br/>
+                                <p className="text-gray-300">
+                                    Reliable flight control for surveillance, border security, and live perimeter monitoring. Redundant IMUs and protected power keep systems stable.
+                                </p>
+                            </div>
+                            <div className="border border-gray-800 rounded-2xl px-8 py-15"
+                                style={{
+                                    background:
+                                        "linear-gradient(to bottom, oklch(58.5% 0.233 277.117) 2%, oklch(25.7% 0.09 281.288) 30%, black 80%)",
+                                }}
+                            >
+                                <h3 className="text-gray-200 text-xl md:text-3xl">Tactical Mission Platforms</h3>
+                                <br/>
+                                <p className="text-gray-300">
+                                    Dedicated safety processors maintain motor control even during resets — ideal for defense-grade reliability and compliance.
+                                </p>
+                            </div>
+                            <div className="border border-gray-800 rounded-2xl px-8 py-15"
+                                style={{
+                                    background:
+                                        "linear-gradient(to bottom, oklch(58.5% 0.233 277.117) 2%, oklch(25.7% 0.09 281.288) 30%, black 80%)",
+                                }}
+                            >
+                                <h3 className="text-gray-200 text-xl md:text-3xl">Precision Agrospray Fleet</h3>
+                                <br/>
+                                <p className="text-gray-300">
+                                    Stable attitude control for heavy-lift drones. Brownout-resistant design ensures uptime under vibration.
+                                </p>
+                            </div>
+                            <div className="border border-gray-800 rounded-2xl px-8 py-15"
+                                style={{
+                                    background:
+                                        "linear-gradient(to bottom, oklch(58.5% 0.233 277.117) 2%, oklch(25.7% 0.09 281.288) 30%, black 80%)",
+                                }}
+                            >
+                                <h3 className="text-gray-200 text-xl md:text-3xl">Industrial Inspection</h3>
+                                <br/>
+                                <p className="text-gray-300">
+                                    Ideal for solar farms, wind turbines, and pipelines. Expansion-ready interfaces make integrating payloads effortless.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section className="flex flex-col h-auto mt-55">
                     <div className="flex items-center justify-center">
                         <div className="max-w-2xl text-center">
                             <h2 className="text-gray-200 text-3xl md:text-5xl font-semibold leading-tight">
                                 Integrated <a className="text-indigo-600">Reliability</a> <br /> Architecture
                             </h2>
-                            <p className="text-gray-300 md:text-md leading-relaxed mb-8 mt-4">
+                            <p className="text-gray-300 text-base md:text-xl leading-relaxed mb-10 mt-4">
                                 V1 single, monobolic flight core combines all cube class features
-                                into one compact PCB. It is cleaner, lighter, and more reliable —
+                                into <strong><a className="text-gray-400">one compact PCB</a></strong>. It is cleaner, lighter, and more reliable
                                 a better alternative to traditional cube stacks.
                             </p>
                         </div>
                     </div>
 
 
-                    <div className="md:ml-22 rounded-xl border-gray-800 py-10 px-6 md:px-16">
-                        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-8 text-gray-300 border-t border-b border-zinc-700 py-8">
+                    <div className="md:ml-22 py-10 px-6 md:px-16">
+                        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-8 text-gray-300 md:border-t md:border-b md:border-zinc-700 py-8">
                             <div className="hidden lg:block absolute left-1/3 top-0 bottom-0 w-px bg-zinc-700"></div>
                             <div className="hidden lg:block absolute left-2/3 top-0 bottom-0 w-px bg-zinc-700"></div>
 
@@ -105,61 +164,16 @@ System Status: All systems nominal`}
                     </div>
                 </section>
 
-                {/* --- Section 4 --- */}
                 <section
-                    className="relative h-[90vh] flex flex-col items-center justify-center overflow-hidden rounded-3xl border md:mx-8 my-10"
+                    className="relative h-[70vh] flex flex-col items-center justify-center overflow-hidden rounded-3xl border sm:mx-6 my-10"
                     style={{
-                        background: "linear-gradient(to bottom, oklch(81.1% 0.111 293.571), oklch(39.8% 0.195 277.366) 20%, black 60%)"
-                    }}
-                >
-                    <div className="flex flex-col items-center justify-center mt-20 space-y-5 text-center">
-                        <h1 className="text-3xl md:text-6xl font-semibold text-gray-300">Engineered For Real World Mission</h1>
-                        <p className="text-gray-300 text-md md:text-2xl max-w-3xl">
-                            From defense-grade tactical platforms to autonomous mapping fleets, V1 delivers unwavering reliability across the most demanding aerial operations.
-                        </p>
-                    </div>
-
-                    <div className="flex justify-center items-center">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-20 space-x-9 space-y-9">
-                            <div className="border border-gray-800 rounded-2xl px-8 py-8">
-                                <h3 className="text-gray-200 text-xl md:text-3xl">Artificial Intelligence</h3>
-                                <p className="text-gray-300">
-                                    Reliable flight control for surveillance, border security, and live perimeter monitoring. Redundant IMUs and protected power keep systems stable.
-                                </p>
-                            </div>
-                            <div className="border border-gray-800 rounded-2xl px-8 py-8">
-                                <h3 className="text-gray-200 text-xl md:text-3xl">Tactical Mission Platforms</h3>
-                                <p className="text-gray-300">
-                                    Dedicated safety processors maintain motor control even during resets — ideal for defense-grade reliability and compliance.
-                                </p>
-                            </div>
-                            <div className="border border-gray-800 rounded-2xl px-8 py-8">
-                                <h3 className="text-gray-200 text-xl md:text-3xl">Precision Agrospray Fleet</h3>
-                                <p className="text-gray-300">
-                                    Stable attitude control for heavy-lift drones. Brownout-resistant design ensures uptime under vibration.
-                                </p>
-                            </div>
-                            <div className="border border-gray-800 rounded-2xl px-6 py-6">
-                                <h3 className="text-gray-200 text-xl md:text-3xl">Industrial Inspection</h3>
-                                <p className="text-gray-300">
-                                    Ideal for solar farms, wind turbines, and pipelines. Expansion-ready interfaces make integrating payloads effortless.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section
-                    className="relative h-[70vh] flex flex-col items-center justify-center overflow-hidden rounded-3xl border md:mx-8 my-10"
-                    style={{
-                        background: "linear-gradient(to bottom, black 60%, oklch(39.8% 0.195 277.366) 80%, oklch(81.1% 0.111 293.571))"
+                        background: "linear-gradient(to bottom, black 20%, oklch(39.8% 0.195 277.366) 70%, oklch(81.1% 0.111 293.571))"
                     }}
                 >
                     <div className="flex flex-col justify-center items-center text-center max-w-4xl mx-auto mt-10">
                         <h1 className="text-gray-200 text-2xl md:text-5xl mb-4">Precision flight control<br />for demanding operations</h1>
                         <p className="text-gray-300 text-sm md:text-base leading-relaxed mt-3">
-                            V1 combines dual-processor control and triple redundant sensors to deliver performance across defense,
-                            agriculture, and industrial operations.
+                            Launching soon, stay tuned
                         </p>
                     </div>
                 </section>
