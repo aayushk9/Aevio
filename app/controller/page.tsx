@@ -7,7 +7,7 @@ export default function Controller() {
     return (
         <section className="mb-5 w-full overflow-x-hidden">
             <Navbar />
-            <div className="pt-20 space-y-10">
+            <div className="pt-20">
                 <div
                     className="z-0 relative h-[85vh] flex flex-col md:flex-row items-center justify-center overflow-hidden rounded-3xl border sm:mx-6 my-10"
                     style={{
@@ -41,20 +41,20 @@ export default function Controller() {
                     <div className="rounded-2xl border border-gray-800 px-10 py-10">
                         <pre className="text-gray-300 text-base md:text-base leading-relaxed">
                             {`Booting Aevio V1 firmware
-Initializing sensors
-IMU: Dual 6-axis calibrated
-GPS: 12 satellites locked
-Barometer: Stable pressure data
-FMU Load: 37%
-Co-Processor Sync: Active
-Loop Time: 2.1 ms
-Telemetry: 58 packets/sec
-Logging: microSD active
-Flight Mode: Stabilize
-System Status: All systems nominal`}
+                             Initializing sensors
+                             IMU: Dual 6-axis calibrated
+                             GPS: 12 satellites locked
+                             Barometer: Stable pressure data
+                             FMU Load: 37%
+                             Co-Processor Sync: Active
+                             Loop Time: 2.1 ms
+                             Telemetry: 58 packets/sec
+                             Logging: microSD active
+                             Flight Mode: Stabilize
+                             System Status: All systems nominal`}
                         </pre>
                     </div>
-                </section>
+                 </section>
 
                 <section className="flex flex-col items-center justify-center overflow-hidden rounded-3xl border mx-8 mt-4 mb-10">
                     <div className="flex flex-col items-center justify-center mt-20 space-y-5 text-center mr-6">
