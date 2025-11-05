@@ -5,58 +5,70 @@ export default function About() {
   return (
     <section className="min-h-screen bg-black text-gray-100">
       <Navbar />
+
       <div className="flex min-h-[calc(100vh-4rem)] items-center justify-center px-6 py-12">
         <div className="w-full max-w-3xl space-y-12 rounded-xl p-8 shadow-2xl backdrop-blur-sm">
           <div id="about" className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight">About Us</h1>
+            <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
+              About us
+            </h1>
           </div>
 
           <div id="mission">
-            <h3 className="mb-2 text-xl font-semibold">Our Mission</h3>
-            <p className="text-gray-300">
-              Zero is an AI-powered email client that manages your inbox, so you
-              don’t have to. We help busy professionals unclutter their inboxes,
-              prioritize important messages, summarize conversations, complete
-              tasks, and even chat with their inbox — letting them spend less
-              time managing email and more time getting things done.
+            <h2 className="mb-3 text-2xl font-semibold">
+              Our Mission
+            </h2>
+            <p className="text-gray-300 leading-relaxed">
+              To deliver reliable, deterministic, and future-proof flight
+              controllers that empower engineers and operators to push the
+              boundaries of unmanned systems—without compromise on safety,
+              weight, or performance.
             </p>
           </div>
 
           <div id="start">
-            <h3 className="mb-2 text-xl font-semibold">Why We Started</h3>
-            <p className="text-gray-300">
-              We started Zero because we were frustrated that email — the
-              most-used communication tool in the world — hasn’t meaningfully
-              evolved in decades. Despite countless new apps, none actually
-              solve the real problem: helping you finish what you intend to do.
-              We realized the real solution isn’t just a new interface — it’s AI
-              acting like a true assistant inside your inbox.
+            <h2 className="mb-3 text-2xl font-semibold">
+              Why We Started
+            </h2>
+            <p className="text-gray-300 leading-relaxed">
+              The drone industry is exploding, yet the core flight-control stack
+              has remained largely unchanged for years. Stacked modules,
+              fragile connectors, and opaque firmware create hidden failure
+              points. We saw an opportunity to **re-imagine the entire stack**
+              from the ground up—single-board, high-reliability, and
+              open-source-friendly.
             </p>
           </div>
 
           <div id="journey">
-            <h3 className="mb-2 text-xl font-semibold">Our Journey</h3>
-            <p className="text-gray-300">
-              We launched our early access program and have already seen strong
-              demand, with over 15,000 signups in just under 3 months. What we
-              found is that users want an assistant that streamlines their
-              inbox, providing features to summarize emails, compose responses,
-              and take necessary actions.
+            <h2 className="mb-3 text-2xl font-semibold">
+              Our Journey
+            </h2>
+            <p className="text-gray-300 leading-relaxed">
+              From a pre final year engineering project to a fully-functional FMUv6X-class
+              controller, every iteration has been driven by real-world
+              feedback. We’ve stress-tested in extreme vibration, thermal
+              cycles, and EMI-rich environments. Today, **Aevio V1** is in
+              limited beta with early adopters who are already flying
+              mission-critical payloads.
             </p>
           </div>
 
           <div id="founders">
-            <h3 className="mb-2 text-xl font-semibold">Our Founders</h3>
-            <p className="text-gray-300">
-              Adam and Nizar, the cofounders of Zero, met through family
-              friends. Coming from backgrounds in product design and software
-              engineering, we both felt the pain of drowning in email firsthand
-              while trying to build and grow companies.
+            <h2 className="mb-3 text-2xl font-semibold">
+              Our Founders
+            </h2>
+            <p className="text-gray-300 leading-relaxed">
+             Devesh and Shivanker founder and co-founder of aevio come from the College of Engineering Pune (COEP).
+             Passionate about drones and embedded systems, we're hacking away at the future of 
+             autonomy one line of code at a time. We believe the edge is where the real magic happens,
+             hardware and software in perfect.
             </p>
           </div>
         </div>
       </div>
-      <Footer/>
+
+      <Footer />
     </section>
   );
 }
