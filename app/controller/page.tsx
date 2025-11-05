@@ -2,6 +2,7 @@
 
 import { Navbar } from "@/components/Navbar/Navbar"
 import { Footer } from "@/components/Footer/Footer"
+import BootLog from "@/components/Bootlog/Bootlog"
 
 export default function Controller() {
     return (
@@ -38,21 +39,8 @@ export default function Controller() {
                             Its co-processor handles telemetry, GPS and motor control ensuring stability.
                         </p>
                     </div>
-                    <div className="rounded-2xl border border-gray-800 px-10 py-10">
-                        <pre className="text-gray-300 text-base md:text-base leading-relaxed">
-                            {`Booting Aevio V1 firmware
-                             Initializing sensors
-                             IMU: Dual 6-axis calibrated
-                             GPS: 12 satellites locked
-                             Barometer: Stable pressure data
-                             FMU Load: 37%
-                             Co-Processor Sync: Active
-                             Loop Time: 2.1 ms
-                             Telemetry: 58 packets/sec
-                             Logging: microSD active
-                             Flight Mode: Stabilize
-                             System Status: All systems nominal`}
-                        </pre>
+                    <div>
+                       <BootLog/>
                     </div>
                  </section>
 
@@ -62,7 +50,7 @@ export default function Controller() {
                     </div>
 
                     <div className="flex justify-center items-center">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-20 items-stretch">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-4xl mx-auto mt-20 items-stretch">
                             <div className="border border-gray-800 rounded-2xl px-8 py-15"
                                 style={{
                                     background:
