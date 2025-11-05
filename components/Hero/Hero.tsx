@@ -1,34 +1,48 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useMemo } from "react";
+import { useEffect, useState } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
 import Link from "next/link";
 import TrueFocus from "../TrueFocus";
 
-export function Hero() {
+type Particle = {
+  id: string;
+  size: number;
+  left: number;
+  top: number;
+  duration: number;
+  delay: number;
+  color: string;
+};
 
-  const PARTICLE_COUNT = 60;
-  const particles = useMemo(() => {
-    return Array.from({ length: PARTICLE_COUNT }, () => ({
-      id: Math.random(),
+export function Hero() {
+  const [particles, setParticles] = useState<Particle[]>([]);
+
+  useEffect(() => {
+    const PARTICLE_COUNT = 60;
+    const newParticles = Array.from({ length: PARTICLE_COUNT }, () => ({
+      id: crypto.randomUUID(),
       size: Math.random() * 3 + 1,
       left: Math.random() * 100,
       top: Math.random() * 40,
       duration: Math.random() * 10 + 15,
       delay: Math.random() * -15,
-      color: 'bg-indigo-300'
+      color: "bg-indigo-300",
     }));
+    setParticles(newParticles);
   }, []);
 
   return (
     <section>
-      <div className="absolute inset-0 z-0 relative h-[95vh] flex items-center justify-center overflow-hidden rounded-2xl border mx-0 sm:mx-6 my-10"
+      <div
+        className="absolute inset-0 z-0 relative h-[95vh] flex items-center justify-center overflow-hidden rounded-2xl border mx-0 sm:mx-6 my-10"
         style={{
           background:
-            "linear-gradient(to bottom, black 20%, oklch(39.8% 0.195 277.366) 70%, oklch(81.1% 0.111 293.571))"
-        }}>
-        {particles.map(p => (
+            "linear-gradient(to bottom, black 20%, oklch(39.8% 0.195 277.366) 70%, oklch(81.1% 0.111 293.571))",
+        }}
+      >
+        {particles.map((p) => (
           <div
             key={p.id}
             className={`absolute rounded-full opacity-70 animate-move-left-to-right shadow-lg ${p.color}`}
@@ -39,11 +53,10 @@ export function Hero() {
               top: `${p.top}%`,
               animationDuration: `${p.duration}s`,
               animationDelay: `${p.delay}s`,
-              transform: 'translateX(0)',
+              transform: "translateX(0)",
             }}
           />
         ))}
-
 
         <div className="relative z-10 text-center px-8">
           <h1 className="text-3xl md:text-7xl font-semibold text-gray-100 leading-tight">
@@ -55,14 +68,12 @@ export function Hero() {
             engineering
           </p>
           <div className="mt-8 flex justify-center gap-4">
-
             <button className="px-6 py-2 border border-white/50 text-white font-medium rounded-full hover:bg-white/10">
               Now in beta
             </button>
           </div>
         </div>
       </div>
-
 
       <section className="relative h-[50vh] mt-60">
         <div className="flex flex-col items-center justify-center">
@@ -94,7 +105,10 @@ export function Hero() {
 
       <section className="border-t border-b border-zinc-800 border-y-6 bg-[#0B0B0B] py-25 mb-10">
         <div>
-          <h1 className="text-gray-300 text-center text-3xl md:text-5xl leading-relaxed">Parallel Processing <br /><span className="text-blue-600">Dual Architecture</span></h1>
+          <h1 className="text-gray-300 text-center text-3xl md:text-5xl leading-relaxed">
+            Parallel Processing <br />
+            <span className="text-blue-600">Dual Architecture</span>
+          </h1>
         </div>
       </section>
 
@@ -114,12 +128,12 @@ export function Hero() {
             <Accordion type="single" collapsible className="space-y-6">
               {[
                 {
-                  question: " What is Integrated Reliability Architecture (IRA) and why choose it over cube-style stacks?",
+                  question: "What is Integrated Reliability Architecture (IRA) and why choose it over cube-style stacks?",
                   answer:
                     "IRA is our single-board flight core all cube class features on one PCB. Fewer connectors = fewer failures, lower mass, cleaner power and faster setup. Keep the ports, lose the stack.",
                 },
                 {
-                  question: "Why does your single-board (FMUv6X-class) design deliver higher uptime than cube-style (stacked) autopilots? ",
+                  question: "Why does your single-board (FMUv6X-class) design deliver higher uptime than cube-style (stacked) autopilots?",
                   answer:
                     "Uptime is engineered in, not left to chance. The system features triple IMUs from diverse vendors, dual barometers and an independent safety MCU for built-in redundancy. By eliminating interboard and mezzanine connectors, which are common failure points under vibration and thermal stress, it achieves greater long-term stability. The compact single board layout also reduces internal wiring and minimizes EMI pickup and signal noise. According to MIL HDBK 217 reliability modeling, fewer connectors and components directly translate to higher MTBF and better field reliability.",
                 },
@@ -131,12 +145,13 @@ export function Hero() {
                 {
                   question: "Is it truly field-replaceable (FRU)? How fast is a swap?",
                   answer:
-                    "Yes—the entire controller is one FRU. Power off, unplug JST-GHs, four screws out, drop in spare, scan QR to load the right firmware/params, fly. Typical swap <2 minutes. No cube carrier mezzanines to diagnose, no internal ribbons to reseat, fewer spares to carry."
+                    "Yes—the entire controller is one FRU. Power off, unplug JST-GHs, four screws out, drop in spare, scan QR to load the right firmware/params, fly. Typical swap <2 minutes. No cube carrier mezzanines to diagnose, no internal ribbons to reseat, fewer spares to carry.",
                 },
                 {
-                  question: " Does it support edge-AI today and future autonomy needs?",
-                  answer: "Absolutely. The FC streams clean, time-synced state/sensor data over TELEM/CAN to companion computers (Jetson, Xavier, RPi). Run object detection, tracking, assistive navigation, custom mission logic at the edge without a bulky stack. The compact singleboard design saves space/weight for payloads while staying fully ArduPilot/PX4 compatible."
-                }
+                  question: "Does it support edge-AI today and future autonomy needs?",
+                  answer:
+                    "Absolutely. The FC streams clean, time-synced state/sensor data over TELEM/CAN to companion computers (Jetson, Xavier, RPi). Run object detection, tracking, assistive navigation, custom mission logic at the edge without a bulky stack. The compact singleboard design saves space/weight for payloads while staying fully ArduPilot/PX4 compatible.",
+                },
               ].map((faq, index) => (
                 <motion.div
                   key={index}
@@ -149,7 +164,9 @@ export function Hero() {
                     <AccordionTrigger className="px-6 py-4 text-xl font-medium text-left text-gray-200">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-6 text-gray-300 text-lg">{faq.answer}</AccordionContent>
+                    <AccordionContent className="px-6 pb-6 text-gray-300 text-lg">
+                      {faq.answer}
+                    </AccordionContent>
                   </AccordionItem>
                 </motion.div>
               ))}
@@ -158,34 +175,26 @@ export function Hero() {
         </div>
       </section>
 
-      <style>{`
-                @keyframes move-left-to-right {
-                    0% {
-                        /* Start off-screen to the left, slightly faded */
-                        transform: translateX(-100vw);
-                        opacity: 0.1;
-                    }
-                    50% {
-                        /* Max opacity in the middle of the screen */
-                        opacity: 0.8;
-                    }
-                    100% {
-                        /* End off-screen to the right, fully faded */
-                        transform: translateX(150vw);
-                        opacity: 0;
-                    }
-                }
-                .animate-move-left-to-right {
-                    animation-name: move-left-to-right;
-                    animation-iteration-count: infinite;
-                    animation-timing-function: linear;
-                }
-                
-                /* Inter Font is loaded via the parent container */ 
-                .font-inter {
-                    font-family: 'Inter', sans-serif;
-                }
-            `}</style>
+      <style jsx>{`
+        @keyframes move-left-to-right {
+          0% {
+            transform: translateX(-100vw);
+            opacity: 0.1;
+          }
+          50% {
+            opacity: 0.8;
+          }
+          100% {
+            transform: translateX(150vw);
+            opacity: 0;
+          }
+        }
+        .animate-move-left-to-right {
+          animation-name: move-left-to-right;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+        }
+      `}</style>
     </section>
   );
 }
