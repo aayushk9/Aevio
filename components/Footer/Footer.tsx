@@ -1,6 +1,5 @@
 "use client";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { motion } from "framer-motion"
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -20,17 +19,17 @@ export function Footer() {
             </p>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white text-sm block">
+                <a href="/controller" className="text-gray-400 hover:text-white text-sm block">
                   Products
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white text-sm block">
+                <a href="/docs" className="text-gray-400 hover:text-white text-sm block">
                   Documentation
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white text-sm block">
+                <a href="/about" className="text-gray-400 hover:text-white text-sm block">
                   About us
                 </a>
               </li>
@@ -61,14 +60,14 @@ export function Footer() {
             </p>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white text-sm block">
+                <Link href="/" className="text-gray-400 hover:text-white text-sm block">
                   Linkedin
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white text-sm block">
+                <Link href="/" className="text-gray-400 hover:text-white text-sm block">
                   X
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
