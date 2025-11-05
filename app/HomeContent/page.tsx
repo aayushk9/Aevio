@@ -1,13 +1,5 @@
-import { Navbar } from "@/components/Navbar/Navbar"
-import { Hero } from "@/components/Hero/Hero"
-import { Footer } from "@/components/Footer/Footer"
+import { Home } from "@/components/Home/Home"
 
-export function HomeContent() {
-  return (
-    <>
-        <Navbar/>
-        <Hero/>
-        <Footer />
-    </>
-  )
+export default function HomeContent() {
+  return <Home/>
 }

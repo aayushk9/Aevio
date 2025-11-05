@@ -31,7 +31,7 @@ export default function Controller() {
 
                 <section className="relative h-[80vh] flex flex-col md:flex-row items-center justify-center mt-10 mx-0">
                     <div className="z-10 px-4 mb-1 md:mb-6 max-w-2xl md:mr-40">
-                        <h1 className="xs:text-center text-gray-200 text-3xl md:text-5xl font-semibold leading-tight">
+                        <h1 className="text-gray-200 text-3xl md:text-5xl font-semibold leading-tight">
                             Run precise flight <br />logic on <a className="no-underline text-indigo-600">dual core</a> <br />architecture
                         </h1>
                         <p className="text-gray-300 text-base md:text-xl mb-10 mt-6 leading-relaxed">
