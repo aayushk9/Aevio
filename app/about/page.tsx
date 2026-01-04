@@ -21,8 +21,8 @@ export default function About() {
             <p className="text-gray-300 leading-relaxed">
               To deliver reliable, deterministic, and future-proof flight
               controllers that empower engineers and operators to push the
-              boundaries of unmanned systems—without compromise on safety,
-              weight, or performance.
+              boundaries of unmanned systems without compromise on safety,
+              weight or performance.
             </p>
           </div>
 
@@ -31,12 +31,12 @@ export default function About() {
               Why We Started
             </h2>
             <p className="text-gray-300 leading-relaxed">
-              The drone industry is exploding, yet the core flight-control stack
+              The drone industry is exploding, yet the core flight control stack
               has remained largely unchanged for years. Stacked modules,
               fragile connectors, and opaque firmware create hidden failure
-              points. We saw an opportunity to **re-imagine the entire stack**
-              from the ground up—single-board, high-reliability, and
-              open-source-friendly.
+              points. We saw an opportunity to re-imagine the entire stack
+              from the ground up single board, high reliability, and
+              open source friendly.
             </p>
           </div>
 
@@ -47,8 +47,8 @@ export default function About() {
             <p className="text-gray-300 leading-relaxed">
               V1 fully-functional FMUv6X-class
               controller, every iteration has been driven by real-world
-              feedback. We’ve stress-tested in extreme vibration, thermal
-              cycles, and EMI-rich environments. Today, **Aevio V1** is in
+              feedback. We’ve stress tested in extreme vibration, thermal
+              cycles, and EMI rich environments. Today, Aevio V1 is in
               limited beta with early adopters who are already flying
               mission-critical payloads.
             </p>
@@ -62,7 +62,7 @@ export default function About() {
              Aevio is founded by Devesh, final year student of College of Engineering 
              Pune (COEP). With a strong passion for drones and embedded systems, 
              we’re shaping the future of autonomy one line of code at a time. For us, 
-             the edge is where innovation truly comes alive—hardware and software working
+             the edge is where innovation truly comes alive hardware and software working
              as one.
             </p>
           </div>
