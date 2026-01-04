@@ -45,7 +45,7 @@ export default function About() {
               Our Journey
             </h2>
             <p className="text-gray-300 leading-relaxed">
-              From a pre final year engineering project to a fully-functional FMUv6X-class
+              V1 fully-functional FMUv6X-class
               controller, every iteration has been driven by real-world
               feedback. We’ve stress-tested in extreme vibration, thermal
               cycles, and EMI-rich environments. Today, **Aevio V1** is in
@@ -56,13 +56,14 @@ export default function About() {
 
           <div id="founders">
             <h2 className="mb-3 text-2xl font-semibold">
-              Our Founders
+              Founder
             </h2>
             <p className="text-gray-300 leading-relaxed">
-             Devesh and Shivanker founder and co-founder of aevio come from the College of Engineering Pune (COEP).
-             Passionate about drones and embedded systems, we're hacking away at the future of 
-             autonomy one line of code at a time. We believe the edge is where the real magic happens,
-             hardware and software in perfect.
+             Aevio is founded by Devesh, final year student of College of Engineering 
+             Pune (COEP). With a strong passion for drones and embedded systems, 
+             we’re shaping the future of autonomy one line of code at a time. For us, 
+             the edge is where innovation truly comes alive—hardware and software working
+             as one.
             </p>
           </div>
         </div>
