@@ -145,7 +145,7 @@ export function Hero() {
                 {
                   question: "Is it truly field-replaceable (FRU)? How fast is a swap?",
                   answer:
-                    "Yes—the entire controller is one FRU. Power off, unplug JST-GHs, four screws out, drop in spare, scan QR to load the right firmware/params, fly. Typical swap <2 minutes. No cube carrier mezzanines to diagnose, no internal ribbons to reseat, fewer spares to carry.",
+                    "Yes—the entire controller is one FRU. Power off, unplug JST-GHs, four screws out, drop in spare. Typical swap <2 minutes. No cube carrier mezzanines to diagnose, no internal ribbons to reseat, fewer spares to carry.",
                 },
                 {
                   question: "Does it support edge-AI today and future autonomy needs?",

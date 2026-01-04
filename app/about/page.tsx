@@ -19,8 +19,8 @@ export default function About() {
               Our Mission
             </h2>
             <p className="text-gray-300 leading-relaxed">
-              To deliver reliable, deterministic, and future-proof flight
-              controllers that empower engineers and operators to push the
+              To deliver reliable, deterministic, and future-proof UAV
+              electronics that empower engineers and operators to push the
               boundaries of unmanned systems without compromise on safety,
               weight or performance.
             </p>
@@ -60,7 +60,7 @@ export default function About() {
             </h2>
             <p className="text-gray-300 leading-relaxed">
              Aevio is founded by Devesh, final year student of College of Engineering 
-             Pune (COEP). With a strong passion for drones and embedded systems, 
+             Pune (COEP). With a strong passion for electronics and embedded systems, 
              we’re shaping the future of autonomy one line of code at a time. For us, 
              the edge is where innovation truly comes alive hardware and software working
              as one.

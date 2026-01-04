@@ -48,27 +48,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white text-sm block">
-                  aevio@gmail.com
+                <a  href="mailto:aevio.in@gmail.com" className="text-gray-400 hover:text-white text-sm block">
+                  aevio.in@gmail.com
                 </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-wider mb-4 text-gray-300">
-              Socials
-            </p>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/" className="text-gray-400 hover:text-white text-sm block">
-                  Linkedin
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="text-gray-400 hover:text-white text-sm block">
-                  X
-                </Link>
               </li>
             </ul>
           </div>
